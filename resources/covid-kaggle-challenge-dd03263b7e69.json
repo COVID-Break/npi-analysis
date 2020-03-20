@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "covid-kaggle-challenge",
+  "private_key_id": "dd03263b7e69f0c1498cc3a5c3927053bc902c58",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDa0pm5cCFzZV5p\n5IKucYlQNkjipleVcRaQqaXA8hZB5qmgwPg2fv0ylt66qW4jJq2nYrX8KfsDfn7y\n9ldKxn1ErQjbgehz2GkCimktct6uL5UUkf74WLrlYaLehLep7E7oV6C21qvLIp0j\nVZZxqJw+CW9t2qFEH5qAj0KAEQWLzU3r3eupqT1SM2A8VKsqS4pAyBwlP7EeZuHL\nRO/uZ3Xw+QMpQMpmPftlkmtqGIhVwU5Cvg9N2RuDFVUscIvKBduUSquM54OdV1i1\nrvhDmBj5aiBwjaB9F2IZMm6l4Pyiocjfb+v7pKmNl4h7sILMym5SCiiaSMYSJGZ2\nZagHeLkpAgMBAAECggEABASla7W7Z4Qz3VcRb0BR5lF0TAdx7WtwezVG26C69+ZA\n/gGNH458QzKyBp28tt0ZPqh5XwSYnRs9iYiaNAi8eLU5R9e+RP28VHnmLawK4+Wn\nNgPGAtBMAtpJRHzEi8I+h4yLPKuyMHVMixqzzjuiYtgZgpLm5Xp8zPQdo1oaYRx+\nu14XCrJfkj+wyy2iWr+0sHa3YeYyziVC3I7bP1Ca7nqix1fugCxT6xm+u8Apm6N3\nwBCJZNwVYniEznwep0NplaF56Yb3mAXQABEhZgFPGCKbEEGS4q75eFV78ftMN/d+\nI4tw4xu5n3PzFc9g0PxwNB4ZI3wlre5tuPBpoi+5gQKBgQD2UJoXeOX/RMEcVzGw\n2J9KEo9pP0CvqF3SpDQZL2Mg9KKuwPjlp43qx7fsOfWZNiBXzuZymjRHzIAgF5Yo\nkX6aVDnhXvWEJWbZIPkUhU2T2XF251hLoZuu1DEIwFlBSMh2ztB4Nm54mseiHFtS\nFp8ciHnoZqTFwhcdGOpHxmwxbQKBgQDjbUNQ+/LljEQn0BOzP3y4PkWd3A6JaSLb\ntiNbY8I2jErg/jFBl6yFMLSqwInY67zt6+FFAT909ntZCAOYtzzsqt8MZay2/fYV\nynEE/aeFTc0xjsk01UC2VYRBiwJmyCm1VspFKGTV1Wzl/4H49faNt+8pvdIwQBra\nZWpMAkeNLQKBgGSSPoiM9aQH561xsLlbiZaOA35etEPExCJIp3kNDzWajX47DqV+\nh4SwbVmHxM78+bHAqflrGyOhzULNPqNr3LyY3VU3F5oQR3EqdGk7kJRouVpqVXP0\nFYQJ4ceH+imc1TUldptO5kZaNF7tox/eWrMkylno5yhT+moIDUinLO/1AoGAanO2\nUq3b3/5r2IbY8coBwuvDAkUCuObxXg4/NoPXYFkCo5XX0HACXMWTi2lcHKEbafJD\nG12eKk1FJ0NNC6qZZd4FUXQ2B+GP0ltT05Y3V3o3Vb8UBxrak34rzdIXaay/eRYK\nz5w8tqqTsoSKfdIDegpidBNZ0yPubdOSkclvXHECgYAd8mhHDXDCKUV9V2J+V4Gr\nKVYMWhd10lX1mwpeDQQGRRX0i9KLjexZQjUiHSsWx7K4FnsK6gN4O81ysEz3u9CK\n9T61oedUAwGX7xo7XCIVuYlNQszV7eVTqyKe/vVos2KGPD+391x04uaEtZv8iZ0c\nXkg50JzRqhDzKVcT1rVY2g==\n-----END PRIVATE KEY-----\n",
+  "client_email": "storage-service-account@covid-kaggle-challenge.iam.gserviceaccount.com",
+  "client_id": "116541066485693595668",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/storage-service-account%40covid-kaggle-challenge.iam.gserviceaccount.com"
+}
