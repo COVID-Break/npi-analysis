@@ -7,7 +7,6 @@ json
 nltk
 collections
 sklearn
-from sklearn.cluster import KMeans
 country_list
 xgboost
 dash
