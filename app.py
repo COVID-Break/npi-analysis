@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import pickle
 import glob
 import json
-import pickle
 import nltk
 nltk.download('punkt')
 from nltk.corpus import stopwords
@@ -29,6 +28,12 @@ import dash_core_components as dcc
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output, State
 import warnings
+
+warnings.filterwarnings(module='sklearn*', action='ignore', category=DeprecationWarning)
+DATA_FILE = 'labeled_npi.csv'
+
+warnings.filterwarnings(module='sklearn*', action='ignore', category=DeprecationWarning)
+df = pd.read_pickle('data.pkl')
 
 def pca_apply(df, columns, n_comp):
     new_df = df.copy()
@@ -147,8 +152,14 @@ class Preprocesser:
                'npi_pred']
         self.df_full = self.df_full.drop(columns=remove_list)
 
+prepr = Preprocesser(df)
+prepr.run_process()
+cluster_df = prepr.df_full
 def reduce_dimension(row):
     return row[:3]
+
+cluster_df['abstract_tfidf_pca_scaled'] = cluster_df['abstract_tfidf_pca_scaled'].apply(reduce_dimension)
+cluster_df['body_text_tfidf_pca_scaled'] = cluster_df['body_text_tfidf_pca_scaled'].apply(reduce_dimension)
 
 def tokenize(row):
     title_tokens = []
@@ -161,6 +172,18 @@ def tokenize(row):
         remove_comas = [word for word in remove_numbers if not word in [',', '(', ')', '"', ':', '``', '.', '?']]
         title_tokens.extend(remove_comas)
     return [value[0] for value in Counter(title_tokens).most_common()[0:30]]
+
+cluster_df['tokens'] = cluster_df.apply(tokenize, axis=1)
+
+ from dash.dependencies import Output, Input
+from dash.exceptions import PreventUpdate
+import plotly.express as px
+import plotly.graph_objects as go
+import dash
+import dash_html_components as html
+import dash_core_components as dcc
+import dash_bootstrap_components as dbc
+from dash.dependencies import Input, Output, State
 
 def get_breaks(row, col, word_limit=45, break_char='<br>', colon=True):
     col_list = ['tokens', 'author_list', 'doi', 'countries']
@@ -552,14 +575,5 @@ class Cluster_Plot:
             return string
 
 if __name__ == '__main__':
-    warnings.filterwarnings(module='sklearn*', action='ignore', category=DeprecationWarning)
-    DATA_FILE = 'labeled_npi.csv'
-    df = pd.read_pickle('data.pkl')
-    prepr = Preprocesser(df)
-    prepr.run_process()
-    cluster_df = prepr.df_full
-    cluster_df['abstract_tfidf_pca_scaled'] = cluster_df['abstract_tfidf_pca_scaled'].apply(reduce_dimension)
-    cluster_df['body_text_tfidf_pca_scaled'] = cluster_df['body_text_tfidf_pca_scaled'].apply(reduce_dimension)
-    cluster_df['tokens'] = cluster_df.apply(tokenize, axis=1)
     c = Cluster_Plot(cluster_df, 'abstract', 10)
     c.run_process()
