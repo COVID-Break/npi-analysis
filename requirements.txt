@@ -1,0 +1,20 @@
+numpy
+pandas
+matplotlib
+pickle
+glob
+json
+nltk
+collections
+sklearn
+from sklearn.cluster import KMeans
+country_list
+xgboost
+dash
+plotly
+plotly
+dash
+dash_html_components
+dash_core_components
+dash_bootstrap_components
+import warnings
