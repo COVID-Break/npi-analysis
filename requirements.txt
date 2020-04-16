@@ -1,7 +1,6 @@
 numpy
 pandas
 matplotlib
-json
 nltk
 collections
 sklearn
